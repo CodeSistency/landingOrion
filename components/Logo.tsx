@@ -1,4 +1,4 @@
-import { Link } from '@/navigation';
+import { Link } from '@/i18n/routing';
 
 interface LogoProps {
   size?: 'sm' | 'md' | 'lg';
