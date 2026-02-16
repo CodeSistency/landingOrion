@@ -1,0 +1,85 @@
+{
+  "Hero": {
+    "title": "Multiply Your Efficiency",
+    "efficiency": "Efficiency",
+    "subtitle": "We transform your business processes into high-performance systems using AI, advanced workflows, and seamless automation.",
+    "getStarted": "Get Started",
+    "learnMore": "Learn More"
+  },
+  "Features": {
+    "title": "What We Do",
+    "aiAutomation": {
+      "title": "AI Automation",
+      "description": "Intelligent workflows that learn and adapt to your business needs, reducing manual tasks by up to 90%."
+    },
+    "workflowDesign": {
+      "title": "Workflow Design",
+      "description": "Custom-built process architectures designed for maximum output and minimal friction."
+    },
+    "systemIntegration": {
+      "title": "System Integration",
+      "description": "Connect your entire toolstack into a single, unified engine that operates 24/7."
+    }
+  },
+  "Process": {
+    "title": "The Process",
+    "analyze": {
+      "title": "Analyze",
+      "description": "We dive deep into your current operations to identify bottlenecks and automation opportunities."
+    },
+    "design": {
+      "title": "Design",
+      "description": "Our engineers architect a custom automation roadmap tailored to your specific efficiency goals."
+    },
+    "implement": {
+      "title": "Implement",
+      "description": "We deploy the systems and integrate them seamlessly with your existing technology stack."
+    },
+    "optimize": {
+      "title": "Optimize",
+      "description": "Continuous monitoring and refinement ensure your systems always perform at peak efficiency."
+    }
+  },
+  "Benefits": {
+    "title": "Premium Solutions for Scale",
+    "scale": "Scale",
+    "subtitle": "We don't just build scripts. We engineer resilient infrastructure that becomes a competitive advantage for your company.",
+    "efficiency": "Efficiency",
+    "efficiencyDesc": "Faster processing times across your core business operations.",
+    "costSavings": "Cost Savings",
+    "costSavingsDesc": "Reduction in operational overhead through intelligent resource allocation.",
+    "scalability": "Scalability",
+    "scalabilityDesc": "Your systems grow with your business without adding human complexity.",
+    "support": "Support",
+    "supportDesc": "Dedicated premium monitoring to ensure zero downtime for your automations."
+  },
+  "Contact": {
+    "title": "Get In Touch",
+    "subtitle": "Let's discuss how we can multiply your business efficiency.",
+    "name": "Name",
+    "email": "Email",
+    "message": "Message",
+    "placeholderName": "John Doe",
+    "placeholderEmail": "john@company.com",
+    "placeholderMessage": "Tell us about your project...",
+    "send": "Send Message",
+    "sending": "Sending...",
+    "successTitle": "Message Sent",
+    "successDesc": "Thank you for reaching out. Our team will contact you shortly.",
+    "sendAnother": "Send another message",
+    "error": "Something went wrong. Please try again."
+  },
+  "Footer": {
+    "desc": "Multiplying efficiency through intelligent automation and process engineering.",
+    "connect": "Connect",
+    "support": "Support",
+    "legal": "Legal",
+    "privacy": "Privacy Policy",
+    "rights": "All rights reserved.",
+    "premium": "Premium Automation Agency"
+  },
+  "Language": {
+    "en": "English",
+    "es": "Spanish"
+  }
+}

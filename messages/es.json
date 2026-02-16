@@ -1,0 +1,85 @@
+{
+  "Hero": {
+    "title": "Multiplica tu Eficiencia",
+    "efficiency": "Eficiencia",
+    "subtitle": "Transformamos tus procesos de negocio en sistemas de alto rendimiento utilizando IA, flujos de trabajo avanzados y automatización fluida.",
+    "getStarted": "Empezar",
+    "learnMore": "Saber Más"
+  },
+  "Features": {
+    "title": "Qué Hacemos",
+    "aiAutomation": {
+      "title": "Automatización con IA",
+      "description": "Flujos de trabajo inteligentes que aprenden y se adaptan a las necesidades de tu negocio, reduciendo tareas manuales hasta en un 90%."
+    },
+    "workflowDesign": {
+      "title": "Diseño de Procesos",
+      "description": "Arquitecturas de procesos personalizadas diseñadas para el máximo rendimiento y la mínima fricción."
+    },
+    "systemIntegration": {
+      "title": "Integración de Sistemas",
+      "description": "Conecta todo tu stack de herramientas en un motor único y unificado que opera las 24 horas, los 7 días de la semana."
+    }
+  },
+  "Process": {
+    "title": "El Proceso",
+    "analyze": {
+      "title": "Analizar",
+      "description": "Profundizamos en tus operaciones actuales para identificar cuellos de botella y oportunidades de automatización."
+    },
+    "design": {
+      "title": "Diseñar",
+      "description": "Nuestros ingenieros diseñan una hoja de ruta de automatización personalizada adaptada a tus objetivos específicos de eficiencia."
+    },
+    "implement": {
+      "title": "Implementar",
+      "description": "Desplegamos los sistemas y los integramos perfectamente con tu stack tecnológico existente."
+    },
+    "optimize": {
+      "title": "Optimizar",
+      "description": "El monitoreo y refinamiento continuos garantizan que tus sistemas siempre funcionen con la máxima eficiencia."
+    }
+  },
+  "Benefits": {
+    "title": "Soluciones Premium para Escalar",
+    "scale": "Escalar",
+    "subtitle": "No solo creamos scripts. Diseñamos infraestructura resiliente que se convierte en una ventaja competitiva para tu empresa.",
+    "efficiency": "Eficiencia",
+    "efficiencyDesc": "Tiempos de procesamiento más rápidos en todas las operaciones principales de tu negocio.",
+    "costSavings": "Ahorro de Costos",
+    "costSavingsDesc": "Reducción de los gastos operativos mediante la asignación inteligente de recursos.",
+    "scalability": "Escalabilidad",
+    "scalabilityDesc": "Tus sistemas crecen con tu negocio sin añadir complejidad humana.",
+    "support": "Soporte",
+    "supportDesc": "Monitoreo premium dedicado para asegurar cero tiempo de inactividad en tus automatizaciones."
+  },
+  "Contact": {
+    "title": "Contáctanos",
+    "subtitle": "Hablemos sobre cómo podemos multiplicar la eficiencia de tu negocio.",
+    "name": "Nombre",
+    "email": "Correo",
+    "message": "Mensaje",
+    "placeholderName": "Juan Pérez",
+    "placeholderEmail": "juan@empresa.com",
+    "placeholderMessage": "Cuéntanos sobre tu proyecto...",
+    "send": "Enviar Mensaje",
+    "sending": "Enviando...",
+    "successTitle": "Mensaje Enviado",
+    "successDesc": "Gracias por contactarnos. Nuestro equipo se comunicará contigo pronto.",
+    "sendAnother": "Enviar otro mensaje",
+    "error": "Algo salió mal. Por favor intenta de nuevo."
+  },
+  "Footer": {
+    "desc": "Multiplicando la eficiencia a través de la automatización inteligente y la ingeniería de procesos.",
+    "connect": "Conectar",
+    "support": "Soporte",
+    "legal": "Legal",
+    "privacy": "Política de Privacidad",
+    "rights": "Todos los derechos reservados.",
+    "premium": "Agencia de Automatización Premium"
+  },
+  "Language": {
+    "en": "Inglés",
+    "es": "Español"
+  }
+}
