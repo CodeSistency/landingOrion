@@ -1,11 +1,10 @@
 "use client";
 
-import { useLocale, useTranslations } from "next-intl";
-import { usePathname, useRouter } from "@/i18n/routing";
+import { useLocale } from "next-intl";
+import { usePathname, useRouter } from "@/i18n/navigation";
 import { Languages } from "lucide-react";
 
 export function LanguageToggle() {
-  const t = useTranslations("Language");
   const locale = useLocale();
   const router = useRouter();
   const pathname = usePathname();

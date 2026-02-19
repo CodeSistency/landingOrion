@@ -1,9 +1,9 @@
 "use client";
 
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useTranslations } from 'next-intl';
-import { Bot, Terminal, Webhook, BrainCircuit, Database, MessageSquare, Check, Zap, ArrowRight, User } from 'lucide-react';
+import { Bot, Terminal, Webhook, BrainCircuit, Database, MessageSquare, Check, Zap } from 'lucide-react';
 import { fadeInUp, staggerContainer } from '@/lib/motion';
 
 export default function ProductShowcase() {
@@ -25,13 +25,7 @@ export default function ProductShowcase() {
         { id: 4, icon: MessageSquare, label: t('node4') },
     ];
 
-    const agentSequence = [
-        { type: 'user', content: t('userMessage') },
-        { type: 'tool', content: t('tool1') },
-        { type: 'tool', content: t('tool2') },
-        { type: 'tool', content: t('tool3') },
-        { type: 'agent', content: t('agentResponse') },
-    ];
+
 
     const runWorkflow = () => {
         if (isFlowRunning) return;
