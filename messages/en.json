@@ -3,8 +3,51 @@
     "title": "Multiply Your Efficiency",
     "efficiency": "Efficiency",
     "subtitle": "We transform your business processes into high-performance systems using AI, advanced workflows, and seamless automation.",
-    "getStarted": "Get Started",
+    "getStarted": "Book a Demo",
     "learnMore": "Learn More"
+  },
+  "Navbar": {
+    "services": "Services",
+    "process": "Process",
+    "benefits": "Benefits",
+    "bookDemo": "Book a Demo"
+  },
+  "TrustedBy": {
+    "title": "Trusted by innovative teams"
+  },
+  "ChatWidget": {
+    "title": "Orion AI Support",
+    "greeting": "Hello! I'm your Orion AI assistant. How can I help you multiply your efficiency today?",
+    "placeholder": "Type your message...",
+    "send": "Send"
+  },
+  "ProductShowcase": {
+    "title": "Systems in Action",
+    "tab1": "Advanced Workflow",
+    "tab2": "Autonomous AI Agent",
+    "runFlow": "Execute Flow ⚡",
+    "running": "Running...",
+    "simulateSupport": "Simulate Support 💬",
+    "userMessage": "Hi, I can't make it to the consulting session on Tuesday. Please change it to Thursday at 3 PM and charge the difference to my card ending in 4242.",
+    "agentResponse": "Done! Your appointment has been rescheduled to Thursday at 3:00 PM and the charge was successfully processed. A receipt has been sent to your email. How else can I help you?",
+    "tool1": "> [Tool called: Check_Calendar_Availability]",
+    "tool2": "> [Tool called: Reschedule_Appointment_ID_849]",
+    "tool3": "> [Tool called: Stripe_Charge_Card_4242]",
+    "node1": "Webhook: New Lead",
+    "node2": "AI: Qualify Lead",
+    "node3": "CRM: Create Contact",
+    "node4": "Slack: Alert Team"
+  },
+  "ImpactMetrics": {
+    "title": "Proven Impact Metrics",
+    "metric1Value": "+500h",
+    "metric1Label": "Hours saved / month",
+    "metric2Value": "99.9%",
+    "metric2Label": "Workflow accuracy",
+    "metric3Value": "-90%",
+    "metric3Label": "Manual work reduction",
+    "metric4Value": "24/7",
+    "metric4Label": "Continuous operation"
   },
   "Features": {
     "title": "What We Do",

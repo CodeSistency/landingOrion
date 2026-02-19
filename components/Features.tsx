@@ -2,11 +2,11 @@
 
 import { useTranslations } from 'next-intl';
 import { BrainCircuit, Workflow, Plug } from 'lucide-react';
-import { useScrollAnimation } from '../hooks/useScrollAnimation';
+import { motion } from 'framer-motion';
+import { fadeInUp, staggerContainer } from '@/lib/motion';
 
 export default function Features() {
   const t = useTranslations('Features');
-  const { ref, isVisible } = useScrollAnimation(0.1);
 
   const features = [
     {
@@ -27,22 +27,29 @@ export default function Features() {
   ];
 
   return (
-    <section id="features" ref={ref as any} className="py-32 px-6">
+    <motion.section
+      id="features"
+      className="py-32 px-6"
+      variants={staggerContainer}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, margin: "-100px" }}
+    >
       <div className="max-w-7xl mx-auto">
-        <div className="mb-20">
-          <h2 className={`text-3xl md:text-5xl font-bold transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+        <motion.div variants={fadeInUp} className="mb-20">
+          <h2 className="text-3xl md:text-5xl font-bold">
             {t('title')}
           </h2>
-        </div>
+        </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <motion.div variants={staggerContainer} className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {features.map((feature, index) => (
-            <div 
+            <motion.div
               key={index}
-              className={`p-8 rounded-2xl border border-foreground/10 bg-foreground/[0.02] hover:bg-foreground/[0.05] transition-all duration-700 group ${
-                isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'
-              }`}
-              style={{ transitionDelay: `${index * 150}ms` }}
+              variants={fadeInUp}
+              whileHover={{ scale: 1.02 }}
+              transition={{ duration: 0.25, ease: [0.22, 1, 0.36, 1] }}
+              className="p-8 rounded-2xl border border-foreground/10 bg-foreground/[0.02] hover:bg-foreground/[0.05] transition-colors duration-300 group"
             >
               <div className="w-12 h-12 rounded-lg bg-foreground/5 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                 <feature.icon className="w-6 h-6" />
@@ -51,10 +58,10 @@ export default function Features() {
               <p className="text-muted leading-relaxed">
                 {feature.description}
               </p>
-            </div>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
-    </section>
+    </motion.section>
   );
 }

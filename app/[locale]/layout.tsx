@@ -1,21 +1,17 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Poppins } from "next/font/google";
 import Script from "next/script";
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages } from 'next-intl/server';
 import { ThemeProvider } from "@/components/ThemeProvider";
-import { ThemeToggle } from "@/components/ThemeToggle";
-import { LanguageToggle } from "@/components/LanguageToggle";
+import Navbar from "@/components/Navbar";
+import ChatWidget from "@/components/ChatWidget";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const poppins = Poppins({
+  weight: ['300', '400', '500', '600', '700', '800'],
   subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+  variable: "--font-poppins",
 });
 
 const GA_ID = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID;
@@ -49,7 +45,7 @@ export default async function RootLayout({
   return (
     <html lang={locale} suppressHydrationWarning>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-background text-foreground transition-colors duration-300`}
+        className={`${poppins.variable} font-sans antialiased bg-background text-foreground transition-colors duration-300`}
       >
         <NextIntlClientProvider messages={messages}>
           <ThemeProvider
@@ -74,11 +70,23 @@ export default async function RootLayout({
                 </Script>
               </>
             )}
-            
-            <div className="fixed top-6 right-6 z-50 flex items-center gap-4">
-              <LanguageToggle />
-              <ThemeToggle />
-            </div>
+
+            <script
+              type="application/ld+json"
+              dangerouslySetInnerHTML={{
+                __html: JSON.stringify({
+                  "@context": "https://schema.org",
+                  "@type": "ProfessionalService",
+                  "name": "Orion",
+                  "description": "Premium automation agency transforming business processes with AI and intelligent workflows.",
+                  "url": "https://orion.dev"
+                })
+              }}
+            />
+
+            <Navbar />
+
+            <ChatWidget />
 
             {children}
           </ThemeProvider>

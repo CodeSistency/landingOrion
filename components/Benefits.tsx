@@ -1,11 +1,11 @@
 "use client";
 
 import { useTranslations } from 'next-intl';
-import { useScrollAnimation } from '../hooks/useScrollAnimation';
+import { motion } from 'framer-motion';
+import { fadeInUp, staggerContainer } from '@/lib/motion';
 
 export default function Benefits() {
   const t = useTranslations('Benefits');
-  const { ref, isVisible } = useScrollAnimation(0.1);
 
   const benefits = [
     {
@@ -31,10 +31,16 @@ export default function Benefits() {
   ];
 
   return (
-    <section className="py-32 px-6">
-      <div className="max-w-7xl mx-auto" ref={ref as any}>
+    <motion.section
+      className="py-32 px-6"
+      variants={staggerContainer}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, margin: "-100px" }}
+    >
+      <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
-          <div className={`space-y-8 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-20'}`}>
+          <motion.div variants={fadeInUp} className="space-y-8">
             <h2 className="text-4xl md:text-6xl font-bold leading-tight">
               {t('title').split(t('scale'))[0]}
               <span className="text-muted-foreground/30">{t('scale')}</span>
@@ -43,25 +49,25 @@ export default function Benefits() {
             <p className="text-xl text-muted leading-relaxed">
               {t('subtitle')}
             </p>
-          </div>
+          </motion.div>
 
-          <div className="grid grid-cols-2 gap-8">
+          <motion.div variants={staggerContainer} className="grid grid-cols-2 gap-8">
             {benefits.map((benefit, index) => (
-              <div 
+              <motion.div
                 key={index}
-                className={`p-6 rounded-2xl bg-foreground/[0.02] border border-foreground/5 transition-all duration-1000 ${
-                  isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-90'
-                }`}
-                style={{ transitionDelay: `${index * 150}ms` }}
+                variants={fadeInUp}
+                whileHover={{ scale: 1.02 }}
+                transition={{ duration: 0.25, ease: [0.22, 1, 0.36, 1] }}
+                className="p-6 rounded-2xl bg-foreground/[0.02] border border-foreground/5 transition-colors duration-300"
               >
                 <div className="text-4xl font-bold mb-2">{benefit.value}</div>
                 <div className="text-sm font-medium uppercase tracking-widest text-muted mb-4">{benefit.label}</div>
                 <p className="text-sm text-muted/60 leading-relaxed">{benefit.description}</p>
-              </div>
+              </motion.div>
             ))}
-          </div>
+          </motion.div>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 }

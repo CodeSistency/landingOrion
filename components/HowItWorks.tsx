@@ -1,11 +1,11 @@
 "use client";
 
 import { useTranslations } from 'next-intl';
-import { useScrollAnimation } from '../hooks/useScrollAnimation';
+import { motion } from 'framer-motion';
+import { fadeInUp, staggerContainer } from '@/lib/motion';
 
 export default function HowItWorks() {
   const t = useTranslations('Process');
-  const { ref, isVisible } = useScrollAnimation(0.1);
 
   const steps = [
     {
@@ -31,20 +31,25 @@ export default function HowItWorks() {
   ];
 
   return (
-    <section className="py-32 px-6 bg-foreground/[0.02]">
-      <div className="max-w-7xl mx-auto" ref={ref as any}>
-        <h2 className={`text-3xl md:text-5xl font-bold mb-20 transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+    <motion.section
+      id="process"
+      className="py-32 px-6 bg-foreground/[0.02]"
+      variants={staggerContainer}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, margin: "-100px" }}
+    >
+      <div className="max-w-7xl mx-auto">
+        <motion.h2 variants={fadeInUp} className="text-3xl md:text-5xl font-bold mb-20">
           {t('title')}
-        </h2>
+        </motion.h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
+        <motion.div variants={staggerContainer} className="grid grid-cols-1 md:grid-cols-4 gap-12">
           {steps.map((step, index) => (
-            <div 
+            <motion.div
               key={index}
-              className={`relative space-y-4 transition-all duration-1000 ${
-                isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'
-              }`}
-              style={{ transitionDelay: `${index * 200}ms` }}
+              variants={fadeInUp}
+              className="relative space-y-4"
             >
               <div className="text-6xl font-black text-foreground/5 absolute -top-8 -left-4">
                 {step.number}
@@ -56,10 +61,10 @@ export default function HowItWorks() {
               {index < steps.length - 1 && (
                 <div className="hidden md:block absolute top-1/2 -right-6 w-12 border-t border-foreground/10" />
               )}
-            </div>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
-    </section>
+    </motion.section>
   );
 }

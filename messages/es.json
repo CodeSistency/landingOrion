@@ -3,8 +3,51 @@
     "title": "Multiplica tu Eficiencia",
     "efficiency": "Eficiencia",
     "subtitle": "Transformamos tus procesos de negocio en sistemas de alto rendimiento utilizando IA, flujos de trabajo avanzados y automatización fluida.",
-    "getStarted": "Empezar",
+    "getStarted": "Agenda una Demo",
     "learnMore": "Saber Más"
+  },
+  "Navbar": {
+    "services": "Servicios",
+    "process": "Proceso",
+    "benefits": "Beneficios",
+    "bookDemo": "Agendar Demo"
+  },
+  "TrustedBy": {
+    "title": "Equipos innovadores confían en nosotros"
+  },
+  "ChatWidget": {
+    "title": "Soporte Orion AI",
+    "greeting": "¡Hola! Soy tu asistente de Orion AI. ¿Cómo puedo ayudarte a multiplicar tu eficiencia hoy?",
+    "placeholder": "Escribe tu mensaje...",
+    "send": "Enviar"
+  },
+  "ProductShowcase": {
+    "title": "Sistemas en Acción",
+    "tab1": "Workflow Avanzado",
+    "tab2": "Agente IA Autónomo",
+    "runFlow": "Ejecutar Flujo ⚡",
+    "running": "Ejecutando...",
+    "simulateSupport": "Simular Soporte 💬",
+    "userMessage": "Hola, no podré ir el martes a la consultoría. Cámbialo al jueves a las 3 PM y cobra la diferencia a mi tarjeta terminada en 4242.",
+    "agentResponse": "¡Listo! Tu cita ha sido modificada para el Jueves a las 3:00 PM y el cargo procesado exitosamente. Se ha enviado el recibo a tu correo. ¿En qué más puedo ayudarte?",
+    "tool1": "> [Herramienta llamada: Verificar_Disponibilidad_Calendario]",
+    "tool2": "> [Herramienta llamada: Re-agendar_Cita_ID_849]",
+    "tool3": "> [Herramienta llamada: Stripe_Cargar_Metodo_Pago_4242]",
+    "node1": "Entrada: Nuevo Formulario",
+    "node2": "IA: Calificar Lead",
+    "node3": "CRM: Crear Contacto",
+    "node4": "Alerta: Mensaje Slack"
+  },
+  "ImpactMetrics": {
+    "title": "Métricas de Impacto Comprobado",
+    "metric1Value": "+500h",
+    "metric1Label": "Horas recuperadas / mes",
+    "metric2Value": "99.9%",
+    "metric2Label": "Precisión de flujos",
+    "metric3Value": "-90%",
+    "metric3Label": "Reducción manual",
+    "metric4Value": "24/7",
+    "metric4Label": "Operación continua"
   },
   "Features": {
     "title": "Qué Hacemos",

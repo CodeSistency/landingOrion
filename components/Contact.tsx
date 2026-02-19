@@ -1,14 +1,13 @@
 "use client";
 
 import { useState } from 'react';
+import { motion } from 'framer-motion';
 import { useTranslations } from 'next-intl';
 import { trackFormSubmit } from '../lib/analytics';
-import { useScrollAnimation } from '../hooks/useScrollAnimation';
 
 export default function Contact() {
   const t = useTranslations('Contact');
   const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
-  const { ref, isVisible } = useScrollAnimation(0.1);
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -42,29 +41,41 @@ export default function Contact() {
 
   return (
     <section id="contact" className="py-32 px-6 bg-foreground/[0.02]">
-      <div className="max-w-3xl mx-auto" ref={ref as any}>
-        <div className={`text-center mb-16 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+      <div className="max-w-3xl mx-auto">
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.1 }}
+          transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+          className="text-center mb-16"
+        >
           <h2 className="text-3xl md:text-5xl font-bold mb-6">{t('title')}</h2>
           <p className="text-muted text-lg">
             {t('subtitle')}
           </p>
-        </div>
+        </motion.div>
 
         {status === 'success' ? (
           <div className="p-12 text-center rounded-3xl border border-foreground/10 bg-foreground/[0.02] animate-fade-in-scale">
             <h3 className="text-2xl font-bold mb-4">{t('successTitle')}</h3>
             <p className="text-muted">{t('successDesc')}</p>
-            <button 
+            <motion.button
               onClick={() => setStatus('idle')}
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
               className="mt-8 text-sm font-medium hover:underline"
             >
               {t('sendAnother')}
-            </button>
+            </motion.button>
           </div>
         ) : (
-          <form 
+          <motion.form 
             onSubmit={handleSubmit}
-            className={`space-y-6 transition-all duration-1000 delay-200 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.1 }}
+            transition={{ duration: 0.8, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
+            className="space-y-6"
           >
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="space-y-2">
@@ -102,18 +113,20 @@ export default function Contact() {
               />
             </div>
 
-            <button 
-              type="submit" 
-              disabled={status === 'loading'}
-              className="w-full py-5 bg-foreground text-background font-bold rounded-xl hover:bg-muted transition-colors disabled:opacity-50"
-            >
-              {status === 'loading' ? t('sending') : t('send')}
-            </button>
+              <motion.button
+                type="submit" 
+                disabled={status === 'loading'}
+                whileHover={status === 'loading' ? undefined : { scale: 1.02 }}
+                whileTap={status === 'loading' ? undefined : { scale: 0.98 }}
+                className="w-full py-5 bg-foreground text-background font-bold rounded-xl hover:bg-muted transition-colors disabled:opacity-50"
+              >
+               {status === 'loading' ? t('sending') : t('send')}
+             </motion.button>
 
             {status === 'error' && (
               <p className="text-center text-red-400 text-sm">{t('error')}</p>
             )}
-          </form>
+          </motion.form>
         )}
       </div>
     </section>

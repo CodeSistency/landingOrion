@@ -1,6 +1,7 @@
 "use client";
 
 import { useTranslations } from 'next-intl';
+import { motion } from 'framer-motion';
 import Logo from './Logo';
 import { Linkedin, Twitter } from 'lucide-react';
 
@@ -21,27 +22,47 @@ export default function Footer() {
           <div className="flex flex-col gap-4">
             <span className="text-xs font-bold uppercase tracking-widest text-muted/40">{t('connect')}</span>
             <div className="flex items-center gap-6">
-              <a href="#" className="text-muted hover:text-foreground transition-colors">
+              <motion.a
+                href="#"
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
+                className="text-muted hover:text-foreground transition-colors"
+              >
                 <Linkedin className="w-5 h-5" />
-              </a>
-              <a href="#" className="text-muted hover:text-foreground transition-colors">
+              </motion.a>
+              <motion.a
+                href="#"
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
+                className="text-muted hover:text-foreground transition-colors"
+              >
                 <Twitter className="w-5 h-5" />
-              </a>
+              </motion.a>
             </div>
           </div>
 
           <div className="flex flex-col gap-4">
             <span className="text-xs font-bold uppercase tracking-widest text-muted/40">{t('support')}</span>
-            <a href="mailto:contact@orion.dev" className="text-sm text-muted hover:text-foreground transition-colors">
+            <motion.a
+              href="mailto:contact@orion.dev"
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
+              className="text-sm text-muted hover:text-foreground transition-colors"
+            >
               contact@orion.dev
-            </a>
+            </motion.a>
           </div>
 
           <div className="flex flex-col gap-4">
             <span className="text-xs font-bold uppercase tracking-widest text-muted/40">{t('legal')}</span>
-            <a href="/privacy" className="text-sm text-muted hover:text-foreground transition-colors">
+            <motion.a
+              href="/privacy"
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
+              className="text-sm text-muted hover:text-foreground transition-colors"
+            >
               {t('privacy')}
-            </a>
+            </motion.a>
           </div>
         </div>
       </div>
