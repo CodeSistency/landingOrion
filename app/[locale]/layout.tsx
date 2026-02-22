@@ -91,6 +91,7 @@ export default async function RootLayout({
             {children}
           </ThemeProvider>
         </NextIntlClientProvider>
+        <script src="https://buildmyagent.io/widget/699b75c625f60cb51c4d8ea3/widget-professional.js?widgetId=699b75c625f60cb51c4d8ea3"></script>
       </body>
     </html>
   );
