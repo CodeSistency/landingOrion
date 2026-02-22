@@ -17,7 +17,7 @@ export function LanguageToggle() {
   return (
     <button
       onClick={toggleLocale}
-      className="flex items-center gap-2 px-4 py-2 rounded-full bg-zinc-100 dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 transition-colors hover:bg-zinc-200 dark:hover:bg-zinc-800 text-sm font-medium"
+      className="flex items-center gap-2 px-4 py-2 rounded-full bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 transition-colors hover:bg-zinc-200 dark:hover:bg-zinc-800 text-sm font-medium"
       aria-label="Toggle language"
     >
       <Languages className="w-4 h-4" />

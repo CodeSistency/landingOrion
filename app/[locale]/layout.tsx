@@ -86,7 +86,7 @@ export default async function RootLayout({
 
             <Navbar />
 
-            <ChatWidget />
+            {/* <ChatWidget /> */}
 
             {children}
           </ThemeProvider>

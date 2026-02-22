@@ -21,7 +21,7 @@ export default function Footer() {
         <div className="flex flex-col md:flex-row items-start md:items-center gap-8 md:gap-12">
           <div className="flex flex-col gap-4">
             <span className="text-xs font-bold uppercase tracking-widest text-muted/40">{t('connect')}</span>
-            <div className="flex items-center gap-6">
+            {/* <div className="flex items-center gap-6">
               <motion.a
                 href="#"
                 whileHover={{ scale: 1.02 }}
@@ -38,22 +38,22 @@ export default function Footer() {
               >
                 <Twitter className="w-5 h-5" />
               </motion.a>
-            </div>
+            </div> */}
           </div>
 
           <div className="flex flex-col gap-4">
             <span className="text-xs font-bold uppercase tracking-widest text-muted/40">{t('support')}</span>
             <motion.a
-              href="mailto:contact@orion.dev"
+              href="mailto:orion@yavoy.site"
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
               className="text-sm text-muted hover:text-foreground transition-colors"
             >
-              contact@orion.dev
+              orion@yavoy.site
             </motion.a>
           </div>
 
-          <div className="flex flex-col gap-4">
+          {/* <div className="flex flex-col gap-4">
             <span className="text-xs font-bold uppercase tracking-widest text-muted/40">{t('legal')}</span>
             <motion.a
               href="/privacy"
@@ -63,7 +63,7 @@ export default function Footer() {
             >
               {t('privacy')}
             </motion.a>
-          </div>
+          </div> */}
         </div>
       </div>
 

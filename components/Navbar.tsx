@@ -22,16 +22,17 @@ export default function Navbar() {
     }, []);
 
     const navLinks = [
-        { href: '#features', label: t('services') },
-        { href: '#process', label: t('process') }, // Added process to match HowItWorks maybe
-        { href: '#benefits', label: t('benefits') },
+        { href: '#features', label: t('features') },
+        { href: '#services', label: t('services') },
+        { href: '#process', label: t('process') },
+        { href: '#showcase', label: t('benefits') },
     ];
 
     return (
         <nav
             className={`fixed top-0 inset-x-0 z-50 transition-all duration-300 ${isScrolled
-                    ? 'bg-background/80 backdrop-blur-md border-b border-foreground/10 py-4 shadow-sm'
-                    : 'bg-transparent py-6'
+                ? 'bg-background/80 backdrop-blur-md border-b border-foreground/10 py-4 shadow-sm'
+                : 'bg-transparent py-6'
                 }`}
         >
             <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
@@ -52,21 +53,15 @@ export default function Navbar() {
                     </ul>
 
                     <div className="flex items-center gap-4 border-l border-foreground/10 pl-6 space-x-2">
-                        <LanguageToggle />
-                        <ThemeToggle />
-                        <a
-                            href="#contact"
-                            className="px-6 py-2.5 bg-foreground text-background text-sm font-bold rounded-full shadow-[0_4px_14px_rgba(0,0,0,0.1)] hover:shadow-[0_6px_20px_rgba(0,0,0,0.15)] transition-all hover:scale-105 active:scale-95"
-                        >
-                            {t('bookDemo')}
-                        </a>
+                        {/* <LanguageToggle /> */}
+                        {/* <ThemeToggle /> */}
                     </div>
                 </div>
 
                 {/* Mobile Menu Button context */}
                 <div className="flex md:hidden items-center gap-4 relative z-10">
-                    <LanguageToggle />
-                    <ThemeToggle />
+                    {/* <LanguageToggle /> */}
+                    {/* <ThemeToggle /> */}
                     <button
                         onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
                         className="p-2 text-foreground"
@@ -100,13 +95,6 @@ export default function Navbar() {
                                     </li>
                                 ))}
                             </ul>
-                            <a
-                                href="#contact"
-                                onClick={() => setIsMobileMenuOpen(false)}
-                                className="w-full text-center px-6 py-4 bg-foreground text-background text-base font-bold rounded-full shadow-[0_4px_14px_rgba(0,0,0,0.1)]"
-                            >
-                                {t('bookDemo')}
-                            </a>
                         </div>
                     </motion.div>
                 )}

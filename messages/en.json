@@ -7,9 +7,10 @@
     "learnMore": "Learn More"
   },
   "Navbar": {
-    "services": "Services",
+    "features": "Expertise",
+    "services": "Projects",
     "process": "Process",
-    "benefits": "Benefits",
+    "benefits": "Core",
     "bookDemo": "Book a Demo"
   },
   "TrustedBy": {

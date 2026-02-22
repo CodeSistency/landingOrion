@@ -7,9 +7,10 @@
     "learnMore": "Saber Más"
   },
   "Navbar": {
-    "services": "Servicios",
+    "features": "Qué hacemos",
+    "services": "Proyectos",
     "process": "Proceso",
-    "benefits": "Beneficios",
+    "benefits": "Vértices",
     "bookDemo": "Agendar Demo"
   },
   "TrustedBy": {
