@@ -53,15 +53,15 @@ export default function Navbar() {
                     </ul>
 
                     <div className="flex items-center gap-4 border-l border-foreground/10 pl-6 space-x-2">
-                        {/* <LanguageToggle /> */}
-                        {/* <ThemeToggle /> */}
+                        <LanguageToggle />
+                        <ThemeToggle />
                     </div>
                 </div>
 
                 {/* Mobile Menu Button context */}
                 <div className="flex md:hidden items-center gap-4 relative z-10">
-                    {/* <LanguageToggle /> */}
-                    {/* <ThemeToggle /> */}
+                    <LanguageToggle />
+                    <ThemeToggle />
                     <button
                         onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
                         className="p-2 text-foreground"
