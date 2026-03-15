@@ -40,7 +40,7 @@ export default function ChatWidget() {
                 initial={{ y: 50, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ delay: 1, duration: 0.5 }}
-                className="fixed bottom-6 right-6 z-50 p-4 bg-foreground text-background rounded-full shadow-2xl hover:shadow-[0_12px_36px_rgba(0,0,0,0.4)] transition-shadow"
+                className="fixed bottom-6 left-6 z-50 p-4 bg-foreground text-background rounded-full shadow-2xl hover:shadow-[0_12px_36px_rgba(0,0,0,0.4)] transition-shadow"
             >
                 {isOpen ? <X className="w-6 h-6" /> : <MessageSquare className="w-6 h-6" />}
             </motion.button>
@@ -53,7 +53,7 @@ export default function ChatWidget() {
                         animate={{ opacity: 1, y: 0, scale: 1 }}
                         exit={{ opacity: 0, y: 20, scale: 0.95 }}
                         transition={{ duration: 0.2 }}
-                        className="fixed bottom-24 right-6 z-50 w-[350px] sm:w-[400px] h-[500px] bg-background border border-foreground/10 rounded-2xl shadow-2xl flex flex-col overflow-hidden"
+                        className="fixed bottom-24 left-6 z-50 w-[350px] sm:w-[400px] h-[500px] bg-background border border-foreground/10 rounded-2xl shadow-2xl flex flex-col overflow-hidden"
                     >
                         {/* Header */}
                         <div className="p-4 bg-foreground text-background flex items-center gap-3">

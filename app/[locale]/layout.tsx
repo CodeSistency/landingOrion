@@ -1,3 +1,4 @@
+/// <reference path="../../types/elevenlabs.d.ts" />
 import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 import Script from "next/script";
@@ -6,6 +7,7 @@ import { getMessages } from 'next-intl/server';
 import { ThemeProvider } from "@/components/ThemeProvider";
 import Navbar from "@/components/Navbar";
 import ChatWidget from "@/components/ChatWidget";
+import ElevenLabsWidget from "@/components/ElevenLabsWidget";
 import "./globals.css";
 
 const poppins = Poppins({
@@ -86,16 +88,12 @@ export default async function RootLayout({
 
             <Navbar />
 
-            {/* <ChatWidget /> */}
+            <ChatWidget />
 
             {children}
           </ThemeProvider>
         </NextIntlClientProvider>
-        <div id="ai-chat-widget-container"></div>
-        <Script
-          src="https://buildmyagent.io/widget/699b75c625f60cb51c4d8ea3/widget-professional.js?widgetId=699b75c625f60cb51c4d8ea3"
-          strategy="afterInteractive"
-        />
+        <ElevenLabsWidget />
       </body>
     </html>
   );
